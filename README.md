@@ -7,18 +7,18 @@ Help tool for organizing Seek The Duck event.
 
 ### In dev mode:
 Terminal 1
-set NODE_ENV=development
-npm install
-npm run package
+1. set NODE_ENV=development
+1. npm install
+1. npm run package
 
 Terminal 2
-mpn run start
+1. mpn run start
 
 ### Compile for prod mode (minimized + uglyfied):
-set NODE_ENV=development
-npm install
-set NODE_ENV=production
-npm run package
+1. set NODE_ENV=development
+1. npm install
+1. set NODE_ENV=production
+1. npm run package
 
 Please commit src/dir/ folder to allow Heroku to start the project in prod mode.
 
