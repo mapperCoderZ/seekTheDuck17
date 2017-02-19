@@ -2,13 +2,13 @@
     "name": "seekTheDuck2017",
     "version": "2.0.0",
     "scripts": {
-        "clean": "del-cli \"src/app/**/*.js\" \"src/app/**/*.js.map\" \"src/devDist\" \"src/dist\"",
-        "webpack-build-watch": "npm run clean && webpack --progress --watch",
+        "clean": "del-cli \"src/app/**/*.js\" \"src/app/**/*.js.map\" \"src/devDist\" \"src/dist\"" ,
         "tsc": "tsc",
         "tsc:w": "tsc -w",
         "build": "npm run clean && tsc",
-        "start:nodemon": "tsc && concurrently \"tsc -w\" \"nodemon server.js\" ",
-        "start": "node server.js"
+        "start": "node server.js",
+        "start-tsc": "tsc && concurrently \"tsc -w\" \"node server.js\" ",
+        "do-webpack": " npm run clean && webpack --optimize-minimize --define process.env.NODE_ENV=\"'production'\" --progress --watch"
     },
     "dependencies": {
         "@angular/common": "2.4.7",
