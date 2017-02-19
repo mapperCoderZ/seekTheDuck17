@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row" *ngIf="activity">
+        <h4>Orders for {{ activity.name | capitalize }} {{ activity.description | capitalize }}</h4>
+        <br />
+        <table class="table table-striped table-hover orders-table">
+            <tr *ngFor="let order of activity.orders;trackBy:ordersTrackBy">
+                <td>{{ order.productName }}</td>
+                <td class="text-right">{{ order.itemCost | currency:'USD':true }}</td>    
+            </tr>
+            <tr class="summary-border">
+                <td>&nbsp;</td>
+                <td class="text-right">{{ activity.orderTotal | currency:'USD':true }}</td>
+            </tr>
+        </table>
+        <div *ngIf="!activity.orders.length">
+            No orders found
+        </div> 
+    </div>
+    <div *ngIf="!activity" class="row">
+        No activity found
+    </div>  
+</div>

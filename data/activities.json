@@ -1,0 +1,197 @@
+[
+      {
+            "id": 1,
+            "name": "Diner with Gilles",
+            "description": "Dinner on the balcony if weather is fine. We'll share the costs. 3 people max",
+            "date": "Friday 6:00PM",
+            "picture": "dinner",
+            "address": "Rue René Leduc",
+            "city": " Toulouse ",
+            "orders": [
+                {"productName": "Basketball", "itemCost": 7.99},
+                {"productName": "Shoes", "itemCost": 199.99}
+            ],
+            "latitude": 43.611208,
+            "longitude": 1.456876,
+            "bewelcome": "http://www.bewelcome.org/members/GILLOU43",
+            "organizerName": "GILLOU"
+      },
+      {
+            "id": 2,
+            "name": "Seek the Treasure",
+            "description": "Meeting point at parking of musée St Raymond, near the St Sernin big church.<br/>10.29am exactly: start of the game! 60-80 minutes walking throught the city to find the Duck's treasures. The game will take you to the next place for the picnic. Now the Duck keeps the secret of hiding places...<br/>Bring your camera or smartphone (one per group), you will have to take pictures of the group.<br/>For winners the special congratulations from the Duck ;) with the award ceremony on the final day.",
+            "date": "Saturday 10:00AM",
+            "picture": "treasure",
+            "address": "Musée St Raymond",
+            "city": "Toulouse ",
+            "orders": [
+                {"productName": "Frisbee", "itemCost": 2.99},
+                {"productName": "Hat", "itemCost": 5.99}
+            ],
+            "latitude": 43.6078489,
+            "longitude": 1.4409852,
+        "bewelcome": "http://www.bewelcome.org",
+        "organizerName": "?"
+      },
+      {
+            "id": 3,
+            "name": "Giant BBQ in Reno's garden",
+            "description": "BBQ in a big garden, bring some food and drinks for the lunch... ! Local wine tasting ?<br/>We will stay the whole afternoon playing and discussing in the garden.<br/>Workshops: let's build and paint together the Duck mascot + sack race + tug-of-war...<br/>Prizes of Seek the Treasure almong other things were awarded.",
+        "date": "Saturday 1:00PM",
+            "picture": "bbq",
+            "address": "Ask Reno !",
+            "city": " Toulouse ",
+            "orders": [
+                {"productName": "Boomerang", "itemCost": 29.99},
+                {"productName": "Helmet", "itemCost": 19.99},
+                {"productName": "Kangaroo Saddle", "itemCost": 179.99}
+            ],
+        "bewelcome": "http://www.bewelcome.org/members/Reno",
+        "organizerName": "Reno"
+      },
+      {
+            "id": 4,
+            "name": "Saturday night pub crawling",
+            "description": "Let's crawl",
+        "date": "Saturday 8:00PM",
+            "picture": "bourre",
+            "address": "?",
+            "city": "Toulouse",
+            "orders": [
+                {"productName": "Budgie Smugglers", "itemCost": 19.99},
+                {"productName": "Swimming Cap", "itemCost": 5.49}
+            ],
+        "bewelcome": "http://www.bewelcome.org",
+        "organizerName": "?"
+      },
+      {
+            "id": 5,
+            "name": "Open air market",
+            "description": "St Aubin market. discover local products in a nice atmosphere (usually a few bands are playing around). <br/>If you want to buy and enjoy some goods products for the picnic, we advice you to arrive earlier so you can take your time. Main thing for us, No Rush (the market closes at 1:00PM)",
+        "date": "Sunday 10:00AM",
+            "picture": "market",
+            "address": "St Aubin",
+            "city": " Toulouse",
+            "orders": [
+                {"productName": "Bow", "itemCost": 399.99},
+                {"productName": "Arrows", "itemCost": 69.99}
+            ],
+            "latitude": 43.603642,
+            "longitude": 1.454538,
+        "bewelcome": "http://www.bewelcome.org/members/GILLOU43",
+        "organizerName": "GILLOU"
+      },
+      {
+            "id": 6,
+            "name": "Bottles party",
+            "description": "Find all the bottles !",
+        "date": "Sunday 1:00PM",
+            "picture": "bottle",
+            "address": "Allées François Verdier",
+            "city": "Toulouse ",
+            "orders": [
+                {"productName": "Baseball", "itemCost": 9.99},
+                {"productName": "Bat", "itemCost": 19.99}
+            ],
+            "latitude": 43.598300,
+            "longitude": 1.452320,
+        "bewelcome": "http://www.bewelcome.org",
+        "organizerName": "?"
+      },
+      {
+            "id": 7,
+            "name": "Défilé canard ?",
+            "description": "?",
+        "date": "?",
+            "picture": "dinner",
+            "address": "?",
+            "city": "Toulouse ",
+            "orders": [
+                {"productName": "Surfboard", "itemCost": 299.99},
+                {"productName": "Wax", "itemCost": 5.99},
+                {"productName": "Shark Repellent", "itemCost": 15.99}
+            ],
+        "bewelcome": "http://www.bewelcome.org",
+        "organizerName": "?"
+      },
+  {
+    "id": 8,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "orders": [
+      {"productName": "Surfboard", "itemCost": 299.99},
+      {"productName": "Wax", "itemCost": 5.99},
+      {"productName": "Shark Repellent", "itemCost": 15.99}
+    ],
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  },
+  {
+    "id": 9,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "orders": [
+      {"productName": "Surfboard", "itemCost": 299.99},
+      {"productName": "Wax", "itemCost": 5.99},
+      {"productName": "Shark Repellent", "itemCost": 15.99}
+    ],
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  },
+  {
+    "id": 10,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "orders": [
+      {"productName": "Surfboard", "itemCost": 299.99},
+      {"productName": "Wax", "itemCost": 5.99},
+      {"productName": "Shark Repellent", "itemCost": 15.99}
+    ],
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  },
+  {
+    "id": 11,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "orders": [
+      {"productName": "Surfboard", "itemCost": 299.99},
+      {"productName": "Wax", "itemCost": 5.99},
+      {"productName": "Shark Repellent", "itemCost": 15.99}
+    ],
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  },
+  {
+    "id": 12,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "orders": [
+      {"productName": "Surfboard", "itemCost": 299.99},
+      {"productName": "Wax", "itemCost": 5.99},
+      {"productName": "Shark Repellent", "itemCost": 15.99}
+    ],
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  }
+]

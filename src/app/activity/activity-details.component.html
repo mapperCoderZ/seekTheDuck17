@@ -1,0 +1,31 @@
+<div *ngIf="activity">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="images/{{activity.picture | lowercase}}.png" class="details-image" />
+    </div>
+    <div class="col-md-10">
+      <h3>{{ activity.name | capitalize }} <br/></h3>
+      <h4><div [innerHTML]="activity.description"></div></h4>
+      <h5>Local name: {{ activity.organizerName }}
+        <br />
+        Time: {{ activity.date }}<br/>
+        Address: {{ activity.address }}<br/><br/>
+        Contact: <a href="{{ activity.bewelcome }}" target="_blank">organizer profile</a>
+        <br />
+      </h5>
+    </div>
+  </div>    
+  <br /><br />
+  <div class="row">
+    <div class="col-md-12">
+      <cm-map [latitude]="activity.latitude"
+           [longitude]="activity.longitude"
+           [zoom]="13"
+           [enabled]="mapEnabled"
+           [markerText]="'<h3>' + activity.name + '</h3>' + activity.date + ' with ' + activity.organizerName"></cm-map>
+    </div>
+  </div>
+</div>   
+<div *ngIf="!activity" class="row">
+   No activity found
+</div>  

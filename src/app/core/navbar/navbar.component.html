@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inner navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header" style="">
+            <button type="button" class="navbar-toggle" 
+                    (click)="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" routerLink="/activities">
+                <img src="images/canard.png" width="48" height="48" alt="logo" />
+                <span class="app-title">Seek the duck 2017 - Toulouse</span>
+            </a>
+            <span class="navbar-collapse" [attr.data-collapse]="isCollapsed">
+                <ul class="nav navbar-nav nav-pills navBarPadding">
+                    <li routerLinkActive="active"><a routerLink="/welcome">Welcome</a></li>
+                    <li routerLinkActive="active"><a routerLink="/activities">Planning</a></li>
+                    <li routerLinkActive="active"><a routerLink="/orders">Registrations</a></li>
+                </ul>
+            </span>
+        </div>
+    </div>
+</nav>
