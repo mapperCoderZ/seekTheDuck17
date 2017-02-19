@@ -31,15 +31,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.webpack-template.html',
       filename: '../index.html'
-    }),
-      new webpack.optimize.UglifyJsPlugin({
-          beautify: false, // Don't beautify output (uglier to read)
-          comments: false,
-          sourceMap: true,
-          compress: {
-              warnings: false,
-              drop_console: true, // Drop `console` statements
-          }
-      }),
+    })
   ]
 };

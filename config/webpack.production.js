@@ -34,14 +34,17 @@ module.exports = webpackMerge(commonConfig, {
         minimize: true,
         debug: false
     }),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        },
-        output: {
-            comments: false
-        },
-        sourceMap: false
-    })
+      new webpack.optimize.UglifyJsPlugin({
+          beautify: false, // Don't beautify output (uglier to read)
+          sourceMap: false,
+          output: {
+              comments: false,
+          },
+          comments: false,
+          compress: {
+              warnings: false,
+              drop_console: true // Drop `console` statements
+          }
+      })
   ]
 });
