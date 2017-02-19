@@ -110,15 +110,12 @@ app.all('/*', function(req, res) {
     res.sendFile(__dirname + '/src/index.html');
 });
 
-app.listen(5000);
+app.set('port', (process.env.PORT || 5000));
 
-console.log('Express listening on port 5000.');
-
-//Open browser
-var opn = require('opn');
-
-opn('http://localhost:5000').then(() => {
-    console.log('Browser closed.');
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
 });
-
-
