@@ -110,14 +110,14 @@ app.all('/*', function(req, res) {
     res.sendFile(__dirname + '/src/index.html');
 });
 
-app.listen(3000);
+app.listen(5000);
 
-console.log('Express listening on port 3000.');
+console.log('Express listening on port 5000.');
 
 //Open browser
 var opn = require('opn');
 
-opn('http://localhost:3000').then(() => {
+opn('http://localhost:5000').then(() => {
     console.log('Browser closed.');
 });
 
