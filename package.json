@@ -7,7 +7,8 @@
         "tsc": "tsc",
         "tsc:w": "tsc -w",
         "start:nodemon": "tsc && concurrently \"tsc -w\" \"nodemon server.js\" ",
-        "start": "tsc && concurrently \"tsc -w\" \"node server.js\" "
+        "start": "tsc && concurrently \"tsc -w\" \"node server.js\" ",
+        "postinstall": "typings install"
     },
     "dependencies": {
         "@angular/common": "2.4.7",
