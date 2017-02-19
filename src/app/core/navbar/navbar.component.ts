@@ -7,7 +7,7 @@ import { AuthService } from '../services/auth.service';
 import { GrowlerService, GrowlerMessageType } from '../growler/growler.service';
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     selector: 'cm-navbar',
     templateUrl: 'navbar.component.html'
 })

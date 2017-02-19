@@ -6,8 +6,9 @@
         "webpack-build-watch": "npm run clean && webpack --progress --watch",
         "tsc": "tsc",
         "tsc:w": "tsc -w",
+        "build": "npm run clean && tsc",
         "start:nodemon": "tsc && concurrently \"tsc -w\" \"nodemon server.js\" ",
-        "start": "tsc && concurrently \"tsc -w\" \"node server.js\" "
+        "start": "npm run clean && webpack && concurrently \"tsc -w\" \"node server.js\" "
     },
     "dependencies": {
         "@angular/common": "2.4.7",
@@ -46,7 +47,8 @@
         "to-string-loader": "^1.1.5",
         "raw-loader": "^0.5.1",
         "style-loader": "^0.13.1",
-        "@ngtools/webpack": "1.2.9"
+        "@ngtools/webpack": "1.2.9",
+        "browserify":"14.1.0"
     },
     "devDependencies": {
     }

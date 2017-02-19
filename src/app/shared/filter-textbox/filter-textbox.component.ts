@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-filter-textbox',
   templateUrl: 'filter-textbox.component.html',
   styleUrls: [ 'filter-textbox.component.css' ]

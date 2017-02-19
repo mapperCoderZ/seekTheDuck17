@@ -5,7 +5,7 @@ import { DataService } from '../core/services/data.service';
 import { IActivity, IOrder, IOrderItem } from '../shared/interfaces';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-activity-orders',
   templateUrl: 'activity-orders.component.html'
 })

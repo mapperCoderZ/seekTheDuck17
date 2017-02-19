@@ -4,7 +4,7 @@ import { SorterService } from '../core/services/sorter.service';
 import { TrackByService } from '../core/services/trackby.service';
 
 @Component({ 
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-activities-grid',
   templateUrl: 'activities-grid.component.html',
   styleUrls: [ 'activities-grid.component.css' ],

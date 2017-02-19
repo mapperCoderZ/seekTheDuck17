@@ -5,7 +5,7 @@ import { IActivity } from '../shared/interfaces';
 import { DataService } from '../core/services/data.service';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-activity-details',
   templateUrl: 'activity-details.component.html',
   styleUrls: [ 'activity-details.component.css' ]

@@ -5,6 +5,5 @@ require("@angular/core");
 require("@angular/common");
 require("@angular/http");
 require("@angular/router");
-// RxJS
 require("rxjs");
 //# sourceMappingURL=vendor.js.map

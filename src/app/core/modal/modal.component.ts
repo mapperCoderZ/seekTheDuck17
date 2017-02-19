@@ -3,7 +3,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 import { ModalService, IModalContent } from './modal.service';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-modal',
   templateUrl: 'modal.component.html',
   styleUrls: [ 'modal.component.css' ]

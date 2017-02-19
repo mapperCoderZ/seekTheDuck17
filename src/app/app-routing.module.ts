@@ -5,10 +5,10 @@ import { PreloadModulesStrategy } from './core/strategies/preload-modules.strate
 
 const app_routes: Routes = [
   { path: '', pathMatch:'full', redirectTo: '/welcome' },
-  { path: 'activities', loadChildren: 'app/activities/activities.module#ActivitiesModule'},
-  { path: 'activities/:id', loadChildren: 'app/activity/activity.module#ActivityModule'},
-  { path: 'orders', loadChildren: 'app/orders/orders.module#OrdersModule'},
-  { path: 'welcome', loadChildren: 'app/welcome/welcome.module#WelcomeModule'},
+  { path: 'activities', loadChildren: './activities/activities.module#ActivitiesModule'},
+  { path: 'activities/:id', loadChildren: './activity/activity.module#ActivityModule'},
+  { path: 'orders', loadChildren: './orders/orders.module#OrdersModule'},
+  { path: 'welcome', loadChildren: './welcome/welcome.module#WelcomeModule'},
   { path: '**', pathMatch:'full', redirectTo: '/welcome' } //catch any unfound routes and redirect to home page
 ];
 

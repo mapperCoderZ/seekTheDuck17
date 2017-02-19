@@ -5,7 +5,7 @@ import { IActivity, IPagedResults } from '../shared/interfaces';
 import { TrackByService } from '../core/services/trackby.service';
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     selector: 'cm-activities-orders',
     templateUrl: 'orders.component.html'
 })

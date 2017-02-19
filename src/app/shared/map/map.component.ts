@@ -6,7 +6,7 @@ import 'rxjs/add/operator/debounceTime';
 import { MapPointComponent } from './mapPoint.component';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-map',
   templateUrl: 'map.component.html',
   //When using OnPush detectors, then the framework will check an OnPush 

@@ -5,7 +5,7 @@ import { IActivity, IPagedResults } from '../shared/interfaces';
 import { FilterService } from '../core/services/filter.service';
 
 @Component({ 
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-activities',
   templateUrl: 'activities.component.html'
 })

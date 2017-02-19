@@ -8,7 +8,7 @@ import { IActivity } from '../shared/interfaces';
 import { GrowlerService, GrowlerMessageType } from '../core/growler/growler.service';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-activity-edit',
   templateUrl: 'activity-edit.component.html',
   styleUrls: [ 'activity-edit.component.css' ]

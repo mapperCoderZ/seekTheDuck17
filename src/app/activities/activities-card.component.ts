@@ -5,7 +5,7 @@ import { IActivity } from '../shared/interfaces';
 import { TrackByService } from '../core/services/trackby.service';
 
 @Component({ 
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cm-activities-card',
   templateUrl: 'activities-card.component.html',
   styleUrls: [ 'activities-card.component.css' ],
