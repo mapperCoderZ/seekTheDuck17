@@ -6,13 +6,6 @@ npm-debug.log
 .idea
 .vs
 
-# Build Generated Files
-src/app/**/*.js
-src/app/**/*.js.map
-
-# Ignore any Webpack generated files
-src/app/devDist
-src/app/dist
 
 
 

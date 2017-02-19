@@ -8,7 +8,7 @@
         "tsc:w": "tsc -w",
         "build": "npm run clean && tsc",
         "start:nodemon": "tsc && concurrently \"tsc -w\" \"nodemon server.js\" ",
-        "start": "npm run clean && webpack && concurrently \"tsc -w\" \"node server.js\" "
+        "start": "node server.js"
     },
     "dependencies": {
         "@angular/common": "2.4.7",
