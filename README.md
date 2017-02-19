@@ -24,7 +24,7 @@ Terminal 2
 1. set NODE_ENV=production
 1. npm run package
 
-Please commit src/dir/ folder to allow Heroku to start the project in prod mode.
+Please commit src/dist/ folder to allow Heroku to start the project in prod mode.
 
 See https://github.com/DanWahlin/Angular-JumpStart
 
