@@ -11,9 +11,6 @@ src/app/**/*.js
 src/app/**/*.js.map
 src/app/*.js
 src/app/*.js.map
-config/polyfills.js
-config/vendor.js
-config/*.map
 
 # Ignore any Webpack generated files
 src/app/devDist
