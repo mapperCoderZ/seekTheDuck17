@@ -7,8 +7,7 @@
         "tsc": "tsc",
         "tsc:w": "tsc -w",
         "start:nodemon": "tsc && concurrently \"tsc -w\" \"nodemon server.js\" ",
-        "start": "tsc && concurrently \"tsc -w\" \"node server.js\" ",
-        "postinstall": "typings install"
+        "start": "tsc && concurrently \"tsc -w\" \"node server.js\" "
     },
     "dependencies": {
         "@angular/common": "2.4.7",
@@ -29,11 +28,11 @@
         "express": "^4.14.1",
         "body-parser": "^1.16.1",
         "typescript": "2.1.6",
-        "concurrently": "^3.3.0"
+        "concurrently": "^3.3.0",
+        "@types/core-js": "^0.9.35"
     },
     "devDependencies": {
         "opn": "^4.0.2",
-        "@types/core-js": "^0.9.35",
         "@types/node": "^7.0.5",
         "@types/google-maps": "^3.2.0",
         "del-cli": "^0.2.1",
