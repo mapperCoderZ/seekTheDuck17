@@ -9,6 +9,8 @@ npm-debug.log
 # Build Generated Files
 src/app/**/*.js
 src/app/**/*.js.map
+src/app/*.js
+src/app/*.js.map
 
 # Ignore any Webpack generated files
 src/app/dist
