@@ -7,7 +7,7 @@ const app_routes: Routes = [
   { path: '', pathMatch:'full', redirectTo: '/welcome' },
   { path: 'activities', loadChildren: './activities/activities.module#ActivitiesModule'},
   { path: 'activities/:id', loadChildren: './activity/activity.module#ActivityModule'},
-  { path: 'orders', loadChildren: './orders/orders.module#OrdersModule'},
+  { path: 'come', loadChildren: './come/come.module#ComeModule'},
   { path: 'welcome', loadChildren: './welcome/welcome.module#WelcomeModule'},
   { path: '**', pathMatch:'full', redirectTo: '/welcome' } //catch any unfound routes and redirect to home page
 ];

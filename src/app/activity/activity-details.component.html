@@ -4,15 +4,22 @@
       <img src="images/{{activity.picture | lowercase}}.png" class="details-image" />
     </div>
     <div class="col-md-10">
-      <h3>{{ activity.name | capitalize }} <br/></h3>
+      <h3>{{ activity.name | capitalize }} <i *ngIf="activity.registerUrl">(registration needed please)</i> <br/></h3>
       <h4><div [innerHTML]="activity.description"></div></h4>
-      <h5>Local name: {{ activity.organizerName }}
+      <h4>Organized by  <a href="{{ activity.bewelcome }}" target="_blank">{{ activity.organizerName }}</a>
         <br />
-        Time: {{ activity.date }}<br/>
-        Address: {{ activity.address }}<br/><br/>
-        Contact: <a href="{{ activity.bewelcome }}" target="_blank">organizer profile</a>
-        <br />
-      </h5>
+        When ? {{ activity.date }}<br/>
+        Where ? {{ activity.address }}<br/>
+      </h4>
+      <div *ngIf="activity.registerUrl"><h4>
+        <b>Registration</b><br/><br/>
+        <p>Only people who registered to this activity will be able to join !<br/>
+        <i>Maybe you will have to pay for this activity on the BeWelcome page, click here: </i><br/><br/>
+          <a href="{{ activity.registerUrl }}" target="_blank"><img src="images/register.png" /></a></p></h4>
+      </div>
+      <div *ngIf="!activity.registerUrl"><h5><i>
+        (no registration needed, but please go to the main BeWelcome activity page to attend)</i></h5>
+      </div>
     </div>
   </div>    
   <br /><br />

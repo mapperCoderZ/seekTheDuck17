@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { OrdersComponent } from './orders.component';
+import { ComeComponent } from './come.component';
 
 const routes: Routes = [
-  { path: '', component: OrdersComponent }
+  { path: '', component: ComeComponent }
 ];
 
 @NgModule({
   imports: [ RouterModule.forChild(routes) ],
   exports: [ RouterModule ]
 })
-export class OrdersRoutingModule { 
-  static components = [ OrdersComponent ];
+export class ComeRoutingModule {
+  static components = [ ComeComponent ];
 }

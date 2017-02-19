@@ -51,7 +51,7 @@ export class ActivitiesComponent implements OnInit {
   filterChanged(data: string) {
     if (data && this.activities) {
         data = data.toUpperCase();
-        const props = ['name', 'description', 'city'];
+        const props = ['name', 'description', 'date', 'address','organizerName'];
         this.filteredActivities = this.filterService.filter<IActivity>(this.activities, data, props);
     }
     else {

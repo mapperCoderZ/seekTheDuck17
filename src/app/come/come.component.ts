@@ -7,9 +7,9 @@ import { TrackByService } from '../core/services/trackby.service';
 @Component({
     //moduleId: module.id,
     selector: 'cm-activities-orders',
-    templateUrl: 'orders.component.html'
+    templateUrl: 'come.component.html'
 })
-export class OrdersComponent implements OnInit {
+export class ComeComponent implements OnInit {
 
     activities: IActivity[];
     totalRecords: number = 0;
@@ -31,6 +31,16 @@ export class OrdersComponent implements OnInit {
                 this.totalRecords = response.totalRecords;
                 this.activities = response.results;
             });
+    }
+    ngAfterViewInit(){
+        var s1 = document.createElement("script");
+        s1.type = "text/javascript";
+        s1.src = "scripts/momondo.js";
+        s1.charset = 'utf-8';
+        document.getElementsByTagName('head')[0].appendChild(s1);
+
+
+
     }
 
 }

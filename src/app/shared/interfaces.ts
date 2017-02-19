@@ -15,6 +15,7 @@ export interface IActivity {
     longitude?: number;
     bewelcome?: string;
     organizerName?: string;
+    registerUrl?: string;
 }
 
 

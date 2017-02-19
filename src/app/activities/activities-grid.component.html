@@ -6,9 +6,10 @@
                     <thead>
                         <tr>
                             <th>&nbsp;</th>
-                            <th cm-sort-by="name" (sorted)="sort($event)">Activity</th>
-                            <th cm-sort-by="date" (sorted)="sort($event)">Date/time</th>
-                            <th cm-sort-by="address" (sorted)="sort($event)">Address</th>
+                            <!-- le tri ne marche pas avec la pagination-->
+                            <th> <!--cm-sort-by="name" (sorted)="sort($event)"-->Activity</th>
+                            <th> <!--cm-sort-by="date" (sorted)="sort($event)"-->Date/time</th>
+                            <th> <!--cm-sort-by="address" (sorted)="sort($event)"-->Address</th>
                             <!-- Or you can do this directly rather than using sort-by directive -->
                             <th>&nbsp;</th>
                         </tr>
