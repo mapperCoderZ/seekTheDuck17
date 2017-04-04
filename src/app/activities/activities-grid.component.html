@@ -16,7 +16,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let activity of activities;trackBy:trackbyService.activity">
-                            <td><img src="images/{{ activity.picture | lowercase }}.png"
+                            <td><img src="{{ getImgPath(activity) }}"
                                     class="grid-image" alt="Activity Image" /></td>
                             <td><a [routerLink]="['/activities',activity.id,'details']">{{ activity.name | capitalize }}</a></td>
                             <td>{{ activity.date }}</td>

@@ -28,14 +28,17 @@ import { TrackByService } from '../core/services/trackby.service';
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class ActivityCardComponent implements OnInit {
-
+  
   @Input() activities: IActivity[] = [];
   
-  constructor(private trackbyService: TrackByService) { }
-  
+  constructor(private trackbyService: TrackByService) {
+    
+   }
   ngOnInit() {
+  } 
 
-  }
-
-}
+  getImgPath(activity:IActivity){
+      return require('../../images/'+activity.picture+'.png');
+    }
+} 
 

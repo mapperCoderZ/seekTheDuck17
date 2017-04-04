@@ -147,7 +147,12 @@ a.navbar-brand {
 footer {
     margin-top: 15px;
 }
-
+.navbar-fixed-bottom {
+    background-image: url('../images/herbe.png');
+    height: 100px;
+    background-repeat: repeat-x;
+    background-position-y: -80px;
+}
 form {
 	width:50%;
 }

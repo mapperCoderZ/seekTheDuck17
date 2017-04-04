@@ -17,8 +17,14 @@ module.exports = {
   module: {
     loaders: [ 
       { test: /\.html$/, loader: 'raw-loader' }, 
-      { test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'file?name=assets/[name].[hash].[ext]' }, 
-      { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] }
+      { test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, 
+        loaders: [
+          'url-loader?limit=100000&name=[path][name].[ext]',
+          'image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false',
+          ] 
+      },  
+      { test: /\.css$/, 
+        loaders: ['to-string-loader', 'css-loader'] }
     ]
   },
   plugins: [

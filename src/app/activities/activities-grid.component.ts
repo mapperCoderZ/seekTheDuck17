@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core
 
 import { SorterService } from '../core/services/sorter.service';
 import { TrackByService } from '../core/services/trackby.service';
+import { IActivity } from '../shared/interfaces';
 
 @Component({ 
   //moduleId: module.id,
@@ -26,5 +27,7 @@ export class ActivitiesGridComponent implements OnInit {
   sort(prop: string) {
       this.sorterService.sort(this.activities, prop);
   }
-
+  getImgPath(activity:IActivity){
+      return require('../../images/'+activity.picture+'.png');
+    }
 }
