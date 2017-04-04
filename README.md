@@ -15,7 +15,7 @@ Terminal 1
 
 Terminal 2
 
-1. mpn run start
+1. npm run start
 
 ### Compile for prod mode (minimized + uglyfied):
 
