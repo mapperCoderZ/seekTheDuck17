@@ -1,60 +1,62 @@
-import { Injectable, Output, EventEmitter } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Injectable, Output, EventEmitter, Inject } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map'; 
-import 'rxjs/add/operator/catch';
+import { Observable } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 
 import { IUserLogin } from '../../shared/interfaces';
 
 @Injectable()
 export class AuthService {
-    
-    authUrl: string = '/api/auth';
-    isAuthenticated: boolean = false;
+
+    // Can use /api/auth below when running locally
+    // Full domain/port is included for Docker example or if it were to run in the cloud
+    port = (this.window.location.port) ? ':' + this.window.location.port : '';
+    baseUrl = `${this.window.location.protocol}//${this.window.location.hostname}${this.port}`;
+    authUrl = this.baseUrl + '/api/auth';
+    isAuthenticated = false;
     redirectUrl: string;
     @Output() authChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-    constructor(private http: Http) { }
+    constructor(private http: HttpClient, @Inject('Window') private window: Window) { }
 
     private userAuthChanged(status: boolean) {
-       this.authChanged.emit(status); //Raise changed event
+       this.authChanged.emit(status); // Raise changed event
     }
 
-    login(userLogin: IUserLogin) : Observable<boolean> {
-        return this.http.post(this.authUrl + '/login', userLogin)
-                   .map((response: Response) => {
-                       const loggedIn = response.json();
-                       this.isAuthenticated = loggedIn;
-                       this.userAuthChanged(loggedIn);
-                       return loggedIn;
-                   })
-                   .catch(this.handleError);
+    login(userLogin: IUserLogin): Observable<boolean> {
+        return this.http.post<boolean>(this.authUrl + '/login', userLogin)
+            .pipe(
+                map(loggedIn => {
+                    this.isAuthenticated = loggedIn;
+                    this.userAuthChanged(loggedIn);
+                    return loggedIn;
+                }),
+                catchError(this.handleError)
+            );
     }
 
-    logout() : Observable<boolean> {
-        return this.http.post(this.authUrl + '/logout', null)
-                   .map((response: Response) => {
-                       const loggedOut = response.json();
-                       this.isAuthenticated = !loggedOut;
-                       this.userAuthChanged(!loggedOut); //Return loggedIn status
-                       return status;
-                   })
-                   .catch(this.handleError); 
+    logout(): Observable<boolean> {
+        return this.http.post<boolean>(this.authUrl + '/logout', null)
+            .pipe(
+                map(loggedOut => {
+                    this.isAuthenticated = !loggedOut;
+                    this.userAuthChanged(!loggedOut); // Return loggedIn status
+                    return loggedOut;
+                }),
+                catchError(this.handleError)
+            );
     }
 
-    handleError(error: any) {
-        console.error('server error:', error); 
-        if (error instanceof Response) {
-          let errMessage = '';
-          try {
-            errMessage = error.json().error;
-          } catch(err) {
-            errMessage = error.statusText;
-          }
+    private handleError(error: HttpErrorResponse) {
+        console.error('server error:', error);
+        if (error.error instanceof Error) {
+          const errMessage = error.error.message;
           return Observable.throw(errMessage);
+          // Use the following instead if using lite-server
+          // return Observable.throw(err.text() || 'backend server error');
         }
-        return Observable.throw(error || 'Node.js server error');
+        return Observable.throw(error || 'Server error');
     }
 
 }

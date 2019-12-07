@@ -6,23 +6,24 @@ import { AuthService } from '../core/services/auth.service';
 import { ValidationService } from '../core/services/validation.service';
 import { IUserLogin } from '../shared/interfaces';
 import { GrowlerService, GrowlerMessageType } from '../core/growler/growler.service';
+import { LoggerService } from '../core/services/logger.service';
 
 @Component({
-    //moduleId: module.id,
     selector: 'cm-login',
-    templateUrl: 'login.component.html',
-    styleUrls: [ 'login.component.css' ]
+    templateUrl: './login.component.html',
+    styleUrls: [ './login.component.css' ]
 })
 export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     errorMessage: string;
 
-    constructor(private formBuilder: FormBuilder, 
-                private router: Router, 
+    constructor(private formBuilder: FormBuilder,
+                private router: Router,
                 private authService: AuthService,
-                private growler: GrowlerService) { }
+                private growler: GrowlerService,
+                private logger: LoggerService) { }
 
-    ngOnInit() { 
+    ngOnInit() {
         this.buildForm();
     }
 
@@ -33,8 +34,8 @@ export class LoginComponent implements OnInit {
         });
     }
 
-    submit({ userLogin, valid }: { userLogin: IUserLogin, valid: boolean }) {
-        this.authService.login(userLogin)
+    submit({ value, valid }: { value: IUserLogin, valid: boolean }) {
+        this.authService.login(value)
             .subscribe((status: boolean) => {
                 if (status) {
                     this.growler.growl('Logged in', GrowlerMessageType.Info);
@@ -51,7 +52,7 @@ export class LoginComponent implements OnInit {
                     this.growler.growl(loginError, GrowlerMessageType.Danger);
                 }
             },
-            (err: any) => console.log(err));
+            (err: any) => this.logger.log(err));
     }
 
 }

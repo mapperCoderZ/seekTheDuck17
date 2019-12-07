@@ -3,17 +3,22 @@ var express     = require('express'),
     bodyParser  = require('body-parser'),
     fs          = require('fs'),
     app         = express(),
+    port = process.env.PORT || 8080,
     activities   = JSON.parse(fs.readFileSync('data/activities.json', 'utf-8'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//Would normally copy necessary scripts into src folder (via grunt/gulp) but serving
-//node_modules directly to keep everything as simple as possible
-app.use('/node_modules', express.static(__dirname + '/node_modules')); 
+//CORS
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, Authorization, X-Requested-With, X-XSRF-TOKEN, Content-Type, Accept");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+    next();
+});
 
-//The src folder has our static resources (index.html, css, images)
-app.use(express.static(__dirname + '/src')); 
+app.use(express.static(__dirname + '/dist')); 
+console.log(__dirname);
 
 app.get('/api/activities/page/:skip/:top', (req, res) => {
     const topVal = req.params.top,
@@ -94,6 +99,9 @@ app.get('/api/orders/:id', function(req, res) {
     res.json([]);
 });
 
+app.get('/api/states', (req, res) => {
+    res.json(states);
+});
 
 app.post('/api/auth/login', (req, res) => {
     var userLogin = req.body;
@@ -107,15 +115,16 @@ app.post('/api/auth/logout', (req, res) => {
 
 // redirect all others to the index (HTML5 history)
 app.all('/*', function(req, res) {
-    res.sendFile(__dirname + '/src/index.html');
+    res.sendFile(__dirname + '/dist/index.html');
 });
 
-app.set('port', (process.env.PORT || 5000));
+app.listen(port);
 
-//For avoidong Heroku $PORT error
-app.get('/', function(request, response) {
-    var result = 'App is running'
-    response.send(result);
-}).listen(app.get('port'), function() {
-    console.log('App is running, server is listening on port ', app.get('port'));
-});
+console.log('Express listening on port ' + port);
+
+//Open browser
+var opn = require('open');
+
+opn('http://localhost:' + port).then(() => {
+    console.log('Browser closed.');
+    });

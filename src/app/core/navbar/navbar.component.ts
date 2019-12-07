@@ -1,30 +1,33 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 import { AuthService } from '../services/auth.service';
 import { GrowlerService, GrowlerMessageType } from '../growler/growler.service';
+import { LoggerService } from '../services/logger.service';
 
 @Component({
-    //moduleId: module.id,
     selector: 'cm-navbar',
-    templateUrl: 'navbar.component.html'
+    templateUrl: './navbar.component.html'
 })
 export class NavbarComponent implements OnInit, OnDestroy {
 
     isCollapsed: boolean;
-    loginLogoutText: string = 'Login';
+    loginLogoutText = 'Login';
     sub: Subscription;
 
-    constructor(private router: Router, private authservice: AuthService, private growler: GrowlerService) { }
+    constructor(private router: Router,
+        private authservice: AuthService,
+        private growler: GrowlerService,
+        private logger: LoggerService) { }
 
-    ngOnInit() { 
+    ngOnInit() {
         this.sub = this.authservice.authChanged
             .subscribe((loggedIn: boolean) => {
                 this.setLoginLogoutText();
             },
-            (err: any) => console.log(err));
+            (err: any) => this.logger.log(err));
     }
 
     ngOnDestroy() {
@@ -41,11 +44,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
                     this.router.navigate(['/activities']);
                     return;
                 },
-                (err: any) => console.log(err));
+                (err: any) => this.logger.log(err));
         }
         this.redirectToLogin();
     }
-    
+
     redirectToLogin() {
         this.router.navigate(['/login']);
     }
