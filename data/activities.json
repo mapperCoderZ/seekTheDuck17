@@ -1,34 +1,29 @@
 [
       {
             "id": 1,
-            "name": "Diner with Gilles",
-            "description": "Dinner on the balcony if weather is fine. We'll share the costs. 3 people max",
-            "date": "Friday 6:00PM",
+            "name": "Old LYON",
+            "description": "sdfsdfdfdfdffd df df df d",
+            "date": "All year",
             "picture": "dinner",
-            "address": "Rue René Leduc",
-            "city": " Toulouse ",
-            "latitude": 43.611208,
-            "longitude": 1.456876,
-            "bewelcome": "http://www.bewelcome.org/members/GILLOU43",
-            "registerUrl": "https://www.bewelcome.org/activities/1557",
-            "organizerName": "GILLOU"
+            "address": " ",
+            "city": " Lyon ",
+            "latitude": 45.7618085,
+            "longitude": 4.8245667
       },
       {
             "id": 2,
-            "name": "Seek the Treasure",
+            "name": "Vignes",
             "description": "Meeting point at parking of musée St Raymond, near the St Sernin big church.<br/>10.29am exactly: start of the game! 60-80 minutes walking throught the city to find the Duck's treasures. The game will take you to the next place for the picnic. Now the Duck keeps the secret of hiding places...<br/>Bring your camera or smartphone (one per group), you will have to take pictures of the group.<br/>For winners the special congratulations from the Duck ;) with the award ceremony on the final day.",
-            "date": "Saturday 10:00AM",
+            "date": "Summer",
             "picture": "treasure",
-            "address": "Musée St Raymond",
-            "city": "Toulouse ",
-            "latitude": 43.6078489,
-            "longitude": 1.4409852,
-        "bewelcome": "http://www.bewelcome.org",
-        "organizerName": "?"
+            "address": "blabla",
+            "city": "Lyon ",
+            "latitude": 45.8418567,
+            "longitude": 4.7976863
       },
       {
             "id": 3,
-            "name": "Giant BBQ in Reno's garden",
+            "name": "The collines",
             "description": "BBQ in a big garden, bring some food and drinks for the lunch... ! Local wine tasting ?<br/>We will stay the whole afternoon playing and discussing in the garden.<br/>Workshops: let's build and paint together the Duck mascot + sack race + tug-of-war...<br/>Prizes of Seek the Treasure almong other things were awarded.",
         "date": "Saturday 1:00PM",
             "picture": "bbq",
@@ -39,7 +34,7 @@
       },
       {
             "id": 4,
-            "name": "Saturday night pub crawling",
+            "name": "Firminy's church",
             "description": "Let's crawl",
         "date": "Saturday 8:00PM",
             "picture": "bourre",

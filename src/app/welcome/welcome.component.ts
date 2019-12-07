@@ -5,7 +5,6 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'welcome.component.html'
 })
 export class WelcomeComponent implements OnInit {
-    public canardImg: any = require('../../images/canard.png');
 
     constructor() { }
  
