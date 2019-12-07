@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy,
-         trigger, state, style, transition, animate } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { IActivity } from '../shared/interfaces';
 import { TrackByService } from '../core/services/trackby.service';
@@ -30,15 +29,14 @@ import { TrackByService } from '../core/services/trackby.service';
 export class ActivityCardComponent implements OnInit {
   
   @Input() activities: IActivity[] = [];
-  
-  constructor(private trackbyService: TrackByService) {
+  constructor(public trackbyService: TrackByService) {
     
    }
   ngOnInit() {
   } 
 
   getImgPath(activity:IActivity){
-      return require('../../images/'+activity.picture+'.png');
-    }
+    return require('../../images/'+activity.picture+'.png');
+  }
 } 
 

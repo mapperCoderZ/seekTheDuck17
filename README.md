@@ -9,22 +9,29 @@ Help tool for organizing Seek The Duck event.
 
 Terminal 1
 
-1. set NODE_ENV=development
-1. npm install
-1. npm run package
+1. install node
+2. npm install -g @angular/cli
+3. (WINDOWS PRE6REQUESITE - DURING up to 1 hour !) npm install --global --production windows-build-tools
+4. npm install
+5. ng build --watch
 
 Terminal 2
 
-1. npm run start
+1. npm start 
 
-### Compile for prod mode (minimized + uglyfied):
+### Compile for prod mode:
 
-1. set NODE_ENV=development
-1. npm install
-1. set NODE_ENV=production
-1. npm run package
+1. ng build --watch --configuration=production
 
-Please commit src/dist/ folder to allow npm to start the project in prod mode without compiling.
+## Sending statics to github pages
 
+Must be in mappercoderz.github.io repo to work.
+
+1. npm install -g angular-cli-ghpages
+2. ng build --prod --base-href "https://mappercoderz.github.io"
+3. ngh
+4. open the static website: https://mappercoderz.github.io !
+
+See https://alligator.io/angular/deploying-angular-app-github-pages/
 See https://github.com/DanWahlin/Angular-JumpStart
 
