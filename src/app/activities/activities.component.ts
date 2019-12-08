@@ -23,8 +23,8 @@ export class ActivitiesComponent implements OnInit {
   constructor(private dataService: DataService, private filterService: FilterService) { }
   
   ngOnInit() {
-    this.title = 'Activities';
-    this.filterText = 'Filter Activities:';
+    this.title = 'Tours';
+    this.filterText = 'Filter Tours:';
     this.displayMode = DisplayModeEnum.Card;
 
     this.getActivitiesPage(1);
@@ -45,13 +45,13 @@ export class ActivitiesComponent implements OnInit {
           this.totalRecords = response.totalRecords;
         },
         (err: any) => console.log(err),
-        () => console.log('getActivitiesPage() retrieved activities for page: ' + page));
+        () => console.log('getActivitiesPage() retrieved tours for page: ' + page));
   }
 
   filterChanged(data: string) {
     if (data && this.activities) {
         data = data.toUpperCase();
-        const props = ['name', 'description', 'date', 'address','organizerName'];
+        const props = ['name', 'description', 'date', 'address'];
         this.filteredActivities = this.filterService.filter<IActivity>(this.activities, data, props);
     }
     else {

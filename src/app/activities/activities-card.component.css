@@ -11,9 +11,8 @@
 }
 
 .card-header {
-    background-color:#585858;
     font-size:14pt;
-    color:white;
+    color:black;
     padding:5px;
     width:100%;
 }
@@ -42,11 +41,16 @@
 }
 
 .card-image {
-    height:50px;width:50px;margin-top:10px;
+    height:75px;width:75px;margin-top:10px;
+    border-radius: 50%;
 }
+.card-bouton {
+    position: absolute;
+    bottom: 1px;
+    right: 0px;}
 
-.white {
-    color: white;
+.bouton-details {
+    right:0px;
 }
 
 .white:hover {
