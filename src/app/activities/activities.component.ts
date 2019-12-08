@@ -27,25 +27,20 @@ export class ActivitiesComponent implements OnInit {
     this.filterText = 'Filter Tours:';
     this.displayMode = DisplayModeEnum.Card;
 
-    this.getActivitiesPage(1);
+    this.getActivities();
   }
 
   changeDisplayMode(mode: DisplayModeEnum) {
       this.displayMode = mode;
   }
 
-  pageChanged(page: number) {
-    this.getActivitiesPage(page);
-  }
-
-  getActivitiesPage(page: number) {
-    this.dataService.getActivitiesPage((page - 1) * this.pageSize, this.pageSize)
-        .subscribe((response: IPagedResults<IActivity[]>) => {
-          this.activities = this.filteredActivities = response.results;
-          this.totalRecords = response.totalRecords;
+  getActivities() {
+    this.dataService.getActivities()
+        .subscribe((response: IActivity[]) => {
+          this.activities = this.filteredActivities = response;
         },
         (err: any) => console.log(err),
-        () => console.log('getActivitiesPage() retrieved tours for page: ' + page));
+        () => console.log('getActivities() retrieved'));
   }
 
   filterChanged(data: string) {

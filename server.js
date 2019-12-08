@@ -4,7 +4,7 @@ var express     = require('express'),
     fs          = require('fs'),
     app         = express(),
     port = process.env.PORT || 8080,
-    activities   = JSON.parse(fs.readFileSync('data/activities.json', 'utf-8'));
+    activities   = JSON.parse("[]");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
