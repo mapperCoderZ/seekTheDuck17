@@ -1,0 +1,138 @@
+[
+      {
+            "id": 1,
+            "name": "Old LYON",
+            "description": "sdfsdfdfdfdffd df d<img alt='' src='http://www.23hq.com/23666/43117793_9a00dba413bd36b67b2fdbb3172f52df_standard.jpg' title='Cliquer pour agrandir' style='visibility: visible;'>f df d",
+            "date": "All year",
+            "picture": "dinner",
+            "address": " ",
+            "city": " Lyon ",
+            "latitude": 45.7618085,
+            "longitude": 4.8245667
+      },
+      {
+            "id": 2,
+            "name": "Vignes",
+            "description": "Meeting point at parking of musée St Raymond, near the St Sernin big church.<br/>10.29am exactly: start of the game! 60-80 minutes walking throught the city to find the Duck's treasures. The game will take you to the next place for the picnic. Now the Duck keeps the secret of hiding places...<br/>Bring your camera or smartphone (one per group), you will have to take pictures of the group.<br/>For winners the special congratulations from the Duck ;) with the award ceremony on the final day.",
+            "date": "Summer",
+            "picture": "treasure",
+            "address": "blabla",
+            "city": "Lyon ",
+            "latitude": 45.8418567,
+            "longitude": 4.7976863
+      },
+      {
+            "id": 3,
+            "name": "The collines",
+            "description": "BBQ in a big garden, bring some food and drinks for the lunch... ! Local wine tasting ?<br/>We will stay the whole afternoon playing and discussing in the garden.<br/>Workshops: let's build and paint together the Duck mascot + sack race + tug-of-war...<br/>Prizes of Seek the Treasure almong other things were awarded.",
+        "date": "Saturday 1:00PM",
+            "picture": "bbq",
+            "address": "Ask Reno !",
+            "city": " Toulouse ",
+        "bewelcome": "http://www.bewelcome.org/members/Reno",
+        "organizerName": "Reno"
+      },
+      {
+            "id": 4,
+            "name": "Firminy's church",
+            "description": "Let's crawl",
+        "date": "Saturday 8:00PM",
+            "picture": "bourre",
+            "address": "?",
+            "city": "Toulouse",
+        "bewelcome": "http://www.bewelcome.org",
+        "organizerName": "?"
+      },
+      {
+            "id": 5,
+            "name": "Open air market",
+            "description": "St Aubin market. discover local products in a nice atmosphere (usually a few bands are playing around). <br/>If you want to buy and enjoy some goods products for the picnic, we advice you to arrive earlier so you can take your time. Main thing for us, No Rush (the market closes at 1:00PM)",
+        "date": "Sunday 10:00AM",
+            "picture": "market",
+            "address": "St Aubin",
+            "city": " Toulouse",
+            "latitude": 43.603642,
+            "longitude": 1.454538,
+        "bewelcome": "http://www.bewelcome.org/members/GILLOU43",
+        "organizerName": "GILLOU"
+      },
+      {
+            "id": 6,
+            "name": "Bottles party",
+            "description": "Find all the bottles !",
+        "date": "Sunday 1:00PM",
+            "picture": "bottle",
+            "address": "Allées François Verdier",
+            "city": "Toulouse ",
+            "latitude": 43.598300,
+            "longitude": 1.452320,
+        "bewelcome": "http://www.bewelcome.org",
+        "organizerName": "?"
+      },
+      {
+            "id": 7,
+            "name": "Défilé canard ?",
+            "description": "?",
+        "date": "?",
+            "picture": "dinner",
+            "address": "?",
+            "city": "Toulouse ",
+        "bewelcome": "http://www.bewelcome.org",
+        "organizerName": "?"
+      },
+  {
+    "id": 8,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  },
+  {
+    "id": 9,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  },
+  {
+    "id": 10,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  },
+  {
+    "id": 11,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "?",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  },
+  {
+    "id": 12,
+    "name": "Défilé canard ?",
+    "description": "?",
+    "date": "Monday",
+    "picture": "dinner",
+    "address": "?",
+    "city": "Toulouse ",
+    "bewelcome": "http://www.bewelcome.org",
+    "organizerName": "?"
+  }
+]

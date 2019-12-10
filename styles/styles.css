@@ -84,17 +84,13 @@ a.navbar-brand {
 
 .navbar-inner {
     padding-left: 0px;
-    background-color: #fef350;
+    background-color: black;
 }
 
 .navbar-inner.toolbar {
     background-color: #fafafa;
 }
 
-.navbar-inner.footer {
-    background-color: #fafafa;
-    height:50px;
-}
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
     background-color: #efefef;
@@ -132,26 +128,27 @@ a.navbar-brand {
 }
 
 .navbar-toggle {
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 .navbar-toggle .icon-bar {
-  background-color: white;
-}
-
-.navbar-inner.footer {
-    background-color: #fafafa;
-    height:50px;
+  background-color: black;
 }
 
 footer {
     margin-top: 15px;
+    position: relative;
+    top:20px;
+}
+footer blockquote {
+    font-size: 12px;
+}
+.navbar-fixed-top {
+    background-color: white;
 }
 .navbar-fixed-bottom {
-    background-image: url('../images/herbe.png');
-    height: 100px;
-    background-repeat: repeat-x;
-    background-position-y: -80px;
+    background-color: #292c2f;
+    color: white;
 }
 form {
 	width:50%;
@@ -192,4 +189,9 @@ a:hover, a:focus {
     from {transform: rotate(0deg);}
     to {transform: rotate(359deg);}
   }
-
+.contour-flou{
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(33, 36, 43, 0.75);
+    border-radius: 10%;
+    box-shadow: 0px 0px 10px 2px rgba(33, 36, 43, 0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(33, 36, 43, 0.75);
+}
