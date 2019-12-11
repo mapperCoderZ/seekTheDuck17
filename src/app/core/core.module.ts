@@ -9,6 +9,7 @@ import { OverlayModule } from './overlay/overlay.module';
 
 import { DataService } from './services/data.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 import { FilterService } from './services/filter.service';
 import { SorterService } from './services/sorter.service';
 import { TrackByService } from './services/trackby.service';
@@ -20,8 +21,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   imports: [CommonModule, RouterModule, HttpClientModule, GrowlerModule, ModalModule, OverlayModule],
-  exports: [GrowlerModule, RouterModule, HttpClientModule, ModalModule, OverlayModule, NavbarComponent],
-  declarations: [NavbarComponent],
+  exports: [GrowlerModule, RouterModule, HttpClientModule, ModalModule, OverlayModule, NavbarComponent,FooterComponent],
+  declarations: [NavbarComponent,FooterComponent],
   providers: [SorterService, FilterService, DataService, TrackByService,
     DialogService, AuthService, EventBusService,
     {
