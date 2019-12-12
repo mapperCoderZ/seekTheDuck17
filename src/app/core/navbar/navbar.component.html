@@ -1,17 +1,14 @@
 <nav class="navbar navbar-inner navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" 
-                    (click)="isCollapsed = !isCollapsed">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
             <a class="navbar-brand" routerLink="/welcome">
                 <span class="app-title">Lyon Guidings with DF</span>
             </a>
-            <span class="navbar-collapse" [attr.data-collapse]="isCollapsed">
+            <span class="navbar-collapse">
                 <ul class="nav navbar-nav nav-pills navBarPadding">
                     <li routerLinkActive="active"><a routerLink="/welcome">Welcome</a></li>
                     <li routerLinkActive="active"><a routerLink="/activities">Tours</a></li>

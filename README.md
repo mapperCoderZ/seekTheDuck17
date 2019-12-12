@@ -28,7 +28,7 @@ Terminal 2
 Must be in mappercoderz.github.io repo to work.
 
 1. npm install -g angular-cli-ghpages
-2. ng build --prod --base-href "https://mappercoderz.github.io"
+2. ng build --prod
 3. ngh
 4. open the static website: https://mappercoderz.github.io !
 

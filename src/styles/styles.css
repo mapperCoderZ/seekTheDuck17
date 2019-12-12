@@ -175,6 +175,15 @@ a:hover, a:focus {
     from {transform: rotate(0deg);}
     to {transform: rotate(359deg);}
   }
+
+.df-head{
+    background-image: url("../images/rock.png") ;
+    background-position-y: 5px;
+    background-repeat: no-repeat;
+    padding-left: 64px;
+    padding-top: 5px;
+    height: 70px;
+}
 .contour-flou{
     -webkit-box-shadow: 0px 0px 10px 2px rgba(33, 36, 43, 0.75);
     border-radius: 10%;

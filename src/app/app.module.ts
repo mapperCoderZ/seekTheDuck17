@@ -9,7 +9,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  imports: [
+  imports: [ 
     BrowserModule,
     LoginModule,          // Eager loaded since we may need to go here right away as browser loads based on route user enters
     AppRoutingModule,     // Main routes for application
