@@ -18,9 +18,10 @@ import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard.t
 import { AuthService } from './services/auth.service';
 import { EventBusService } from './services/event-bus.service';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import{ NgbModule}from"@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
-  imports: [CommonModule, RouterModule, HttpClientModule, GrowlerModule, ModalModule, OverlayModule],
+  imports: [CommonModule, RouterModule, HttpClientModule, GrowlerModule, ModalModule, OverlayModule, NgbModule],
   exports: [GrowlerModule, RouterModule, HttpClientModule, ModalModule, OverlayModule, NavbarComponent,FooterComponent],
   declarations: [NavbarComponent,FooterComponent],
   providers: [SorterService, FilterService, DataService, TrackByService,
