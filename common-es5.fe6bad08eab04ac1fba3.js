@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{vTEt:function(n,t,o){"use strict";o.d(t,"a",(function(){return r}));var r=function(){function n(){}return n.prototype.transform=function(n){return"string"==typeof n&&n.charAt(0).toUpperCase()+n.slice(1)||n},n}()}}]);
