@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{vTEt:function(n,t,s){"use strict";s.d(t,"a",(function(){return r}));class r{transform(n){return"string"==typeof n&&n.charAt(0).toUpperCase()+n.slice(1)||n}}}}]);
