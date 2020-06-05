@@ -1,28 +1,22 @@
 <div class="container">
     <div class="row card-container">
         <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let activity of activities;trackBy:trackbyService.activity">
-            <div class="card">
+            <div class="card zoom">
                 <div class="card-header">
-                    <div class="go_title">
-                        {{activity.name | capitalize }}
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="clearfix">
-                        <div class="pull-left card-body-left">
-                            <img src="{{ getImgPath(activity) }}" class="card-image" />
+                    <div class="go_title">{{activity.name | capitalize }}</div>
+                </div> <a [routerLink]="['/activities',activity.id,'details']">
+                <img src="{{ getImgPath(activity) }}" class="  card-fond " >
 
-                        </div>
-                        <div class="pull-left card-body-right">
+               <!-- <div class="card-body mask flex-center rgba-red-strong">
+                    <div class="clearfix">
                         <div class="card-body-content">{{activity.date }}</div>
                         <div class="card-body-content">{{activity.address | trim }}</div>
-                        </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="card-bouton">
                                 <div class="pull-right">
-                    <button type="button" [routerLink]="['/activities',activity.id,'details']" class="btn btn-primary bouton-details" >Details >></button>
-                </div></div>
+                     <button type="button" [routerLink]="['/activities',activity.id,'details']" class="btn btn-primary bouton-details" >Details >></button>
+                </div></div></a>
             </div>
         </div>
         <div *ngIf="!activities.length">

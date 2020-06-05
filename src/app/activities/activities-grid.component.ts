@@ -28,6 +28,6 @@ export class ActivitiesGridComponent implements OnInit {
       this.sorterService.sort(this.activities, prop);
   }
   getImgPath(activity:IActivity){
-      return require('../../images/'+activity.picture+'.png');
+      return require('../../images/'+activity.picture);
     }
 }

@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
-import { IActivity, IOrder, IPagedResults, IApiResponse } from '../../shared/interfaces';
+import { IActivity, IWelcome, IOrder, IPagedResults, IApiResponse } from '../../shared/interfaces';
 
 @Injectable()
 export class DataService {
@@ -13,10 +13,8 @@ export class DataService {
     // Full domain/port is included for Docker example or if it were to run in the cloud
     port = (this.window.location.port) ? ':' + this.window.location.port : '';
     baseUrl = `${this.window.location.protocol}//${this.window.location.hostname}${this.port}`;
-    activitiesBaseUrl = this.baseUrl + '/api/activities';
     activitiesUrl = this.baseUrl + '/assets/activities.json';
-    ordersBaseUrl = this.baseUrl + '/api/orders';
-    orders: IOrder[];
+    welcomeUrl = this.baseUrl + '/assets/welcome.json';
 
     constructor(private http: HttpClient, @Inject('Window') private window: Window) { }
 
@@ -25,6 +23,15 @@ export class DataService {
             .pipe(
                 map(activities => {
                     return activities;
+                }), 
+                catchError(this.handleError)
+            );
+    }
+    getWelcomePage(): Observable<IWelcome> {
+        return this.http.get<IWelcome>(this.welcomeUrl)
+            .pipe(
+                map(w => {
+                    return w;
                 }), 
                 catchError(this.handleError)
             );

@@ -36,7 +36,7 @@ export class ActivityCardComponent implements OnInit {
   } 
 
   getImgPath(activity:IActivity){
-    return require('../../images/'+activity.picture+'.png');
+    return require('../../images/'+activity.picture);
   }
 } 
 

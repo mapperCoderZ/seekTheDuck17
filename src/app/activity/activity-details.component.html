@@ -1,19 +1,19 @@
 <div *ngIf="activity">
   <div class="row">
-    <div class="col-md-2">
-      <img src="images/{{activity.picture | lowercase}}.png" class="details-image" />
+    <div class="col-md-4">
+      <img src="images/{{activity.picture | lowercase}}" class="details-image" />
     </div>
-    <div class="col-md-10">
+    <div class="col-md-6">
       <h3>{{ activity.name | capitalize }} <i *ngIf="activity.registerUrl">(registration needed please)</i> <br/></h3>
       <h4><div [innerHTML]="activity.description"></div></h4>
       <h4>
         <br />
         When ? {{ activity.date }}<br/>
-        Where ? {{ activity.address }}<br/>
+        <!--Where ? {{ activity.address }}<br/>-->
       </h4>
     </div>
   </div>    
-  <br /><br />
+  <br /><br /><!--
   <div class="row">
     <div class="col-md-12">
       <cm-map [latitude]="activity.latitude"
@@ -22,7 +22,7 @@
            [enabled]="mapEnabled"
            [markerText]="'<h3>' + activity.name + '</h3>' + activity.date + ' with ' + activity.organizerName"></cm-map>
     </div>
-  </div>
+  </div>-->
 </div>   
 <div *ngIf="!activity" class="row">
    No activity found

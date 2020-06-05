@@ -17,6 +17,9 @@ export interface IActivity {
     organizerName?: string;
     registerUrl?: string;
 }
+export interface IWelcome {
+    description: string;
+}
 
 
 export interface IOrder {
