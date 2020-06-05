@@ -4,12 +4,17 @@ html {
 }
 
 body {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-y: 60px;
     font-family: Roboto-Regular;
 }
 
 main {
     position: relative;
-    padding-top: 60px;
+    padding-top: 120px;
 }
 
 /* Ensure display:flex and others don't override a [hidden] */
