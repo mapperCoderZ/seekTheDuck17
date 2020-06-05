@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules, NoPreloading } from '@angular/router';
 
-import { PreloadModulesStrategy } from './core/strategies/preload-modules.strategy';
-
 const app_routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/welcome' },
   { path: 'activities/:id', data: { preload: true }, loadChildren: () => import('./activity/activity.module').then(m => m.ActivityModule) },
@@ -14,8 +12,7 @@ const app_routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(app_routes, { preloadingStrategy: PreloadModulesStrategy }) ],
-  exports: [ RouterModule ],
-  providers: [PreloadModulesStrategy]
+  imports: [ RouterModule.forRoot(app_routes) ],
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
