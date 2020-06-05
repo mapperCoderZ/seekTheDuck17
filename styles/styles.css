@@ -4,12 +4,17 @@ html {
 }
 
 body {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-y: 60px;
     font-family: Roboto-Regular;
 }
 
 main {
     position: relative;
-    padding-top: 60px;
+    padding-top: 120px;
 }
 
 /* Ensure display:flex and others don't override a [hidden] */
@@ -129,6 +134,7 @@ a.navbar-brand {
 
 .navbar-toggle {
   border: 1px solid black;
+  top: 2px;
 }
 
 .navbar-toggle .icon-bar {
@@ -207,7 +213,6 @@ footer .navbar {
     margin-bottom:2px;
     right:0;
     left:0;
-    z-index:1030;
     min-height: 150px;
 }
 .fb-like{
