@@ -8,11 +8,28 @@
       <h4><div [innerHTML]="activity.description"></div></h4>
       <h4>
         <br />
-        When ? {{ activity.date }}<br/>
+        When ? {{ activity.date }}<br/><br />
+        You want to book this tour ? You need an information ? Contact me below and I will contact you soon
+        <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+          <input type="hidden" name="tour" value="{{ activity.name | capitalize }}" />
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>   
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <div data-netlify-recaptcha="true"></div>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
         <!--Where ? {{ activity.address }}<br/>-->
       </h4>
     </div>
-  </div>    
+  </div>
   <br /><br /><!--
   <div class="row">
     <div class="col-md-12">
