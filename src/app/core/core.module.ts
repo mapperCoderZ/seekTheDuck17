@@ -5,7 +5,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { GrowlerModule } from './growler/growler.module';
 import { ModalModule } from './modal/modal.module';
-import { OverlayModule } from './overlay/overlay.module';
 
 import { DataService } from './services/data.service';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -21,8 +20,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import{ NgbModule}from"@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
-  imports: [CommonModule, RouterModule, HttpClientModule, GrowlerModule, ModalModule, OverlayModule, NgbModule],
-  exports: [GrowlerModule, RouterModule, HttpClientModule, ModalModule, OverlayModule, NavbarComponent,FooterComponent],
+  imports: [CommonModule, RouterModule, HttpClientModule, GrowlerModule, ModalModule, NgbModule],
+  exports: [GrowlerModule, RouterModule, HttpClientModule, ModalModule, NavbarComponent,FooterComponent],
   declarations: [NavbarComponent,FooterComponent],
   providers: [SorterService, FilterService, DataService, TrackByService,
     DialogService, AuthService, EventBusService,
