@@ -1,5 +1,4 @@
-{
-  "description": "<div class='col-md-10'> 
+<div class='col-md-10'> 
   <p>
       Guide conférencière, amoureuse de notre patrimoine pluriel, j'ai eu la chance de pouvoir guider des groupes très divers à Toulouse, Lyon, et Brocéliande (où je me suis initiée à l'art du conte), avant de m'installer dans la région parisienne. C'est avec plaisir que je vous ferai découvrir quelques trésors dont recèle Paris et sa région, de 7 à 77 ans (et même plus/moins !)
   </p><p>
@@ -16,4 +15,4 @@
 <div class='col-md-10'>
   <img class='contour-flou' src='images/df.jpg'/>
 </div>"
-}
+
