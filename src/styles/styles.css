@@ -257,7 +257,7 @@ footer .navbar {
   text-align: center;
   color: #000;
   min-height: 100px;
-  position: relative;
+  position: relative;margin-bottom: 20px;
 }.border-small{
     background-color: #292c2f;
     color: #fff;
@@ -270,5 +270,5 @@ footer .navbar {
     text-align: center;
     color: #000;
     min-height: 50px;
-    position: relative;
+    position: relative;margin-bottom: 20px;
   }
