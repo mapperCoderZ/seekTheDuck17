@@ -251,13 +251,12 @@ footer .navbar {
     font-size: 25px;
     letter-spacing: 10px;
     top: 50px;
-    position: relative;
 }
      .caption{ 
   top: 25%;
   text-align: center;
   color: #000;
-  height: 200px;
+  min-height: 100px;
   position: relative;
 }.border-small{
     background-color: #292c2f;
@@ -266,11 +265,10 @@ footer .navbar {
     font-size: 25px;
     letter-spacing: 10px;
     top: 25px;
-    position: relative;
 }.caption-small{ 
     top: 25%;
     text-align: center;
     color: #000;
-    height: 100px;
+    min-height: 100px;
     position: relative;
   }
