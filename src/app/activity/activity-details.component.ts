@@ -18,6 +18,7 @@ export class ActivityDetailsComponent implements OnInit {
   contactForm: FormGroup;
   activity: IActivity;
   mapEnabled: boolean;
+  txt: any ;
   get name() { return this.contactForm.get('name'); }
 
   get email() { return this.contactForm.get('email'); }
@@ -34,11 +35,14 @@ export class ActivityDetailsComponent implements OnInit {
       //Subscribe to params so if it changes we pick it up. Could use this.route.parent.snapshot.params["id"] to simplify it.
       this.route.parent.params.subscribe((params: Params) => {
         let id = +params['id'];
+        //this.http.get("/assets/welcome.txt").subscribe(data => {
+        //  this.txt= data;
+     // })
         this.dataService.getActivity(id)
-            .subscribe((activity: IActivity) => {
-              this.activity = activity;
-              this.mapEnabled = true;
-            });
+        .subscribe((activity: IActivity) => {
+          this.activity = activity;
+          this.mapEnabled = true;
+        });
       });
   }
 

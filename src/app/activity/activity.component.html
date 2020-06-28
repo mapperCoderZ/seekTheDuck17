@@ -1,27 +1,28 @@
 <div class="orders view">
     <div class="container">
-        <header>
-            <h3><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Tour Information</h3>
-        </header>
-        <br />
-        <div class="navbar">
+        <div class="row ">
+            <div class="row ">
+              <div class="col-md-12 caption-small">
+                <span class="border-small">Tour Information</span>
+              </div>
+            </div>
+        </div>
+       <!-- <div class="navbar">
             <ul class="nav navbar-nav">
                 <li class="toolbar-item">
                     <a routerLink="details" routerLinkActive="active">
-                       <span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;Tour Details
+                     Tour Details
                     </a>
                 </li>
-                <!--<li class="toolbar-item">
+                <li class="toolbar-item">
                     <a routerLink="edit" routerLinkActive="active">
                         <span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit Activity
                     </a>
-                </li>-->
+                </li>
             </ul>
-        </div>
+        </div>-->
         <div class="container">
             <router-outlet></router-outlet>
-            <br />
-            <br />
             <a routerLink="/activities">View all Activities</a>
         </div>
     </div>

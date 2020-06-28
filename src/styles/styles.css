@@ -145,7 +145,7 @@ a.navbar-brand {
     background-color: white;
 }
 form {
-	width:50%;
+	width:75%;
 }
 a:hover, a:focus {
   text-decoration: none;
@@ -182,16 +182,6 @@ a:hover, a:focus {
     to {transform: rotate(359deg);}
   }
 
-.df-head{
-    background-image: url("../images/rock.png") ;
-    background-position-y: 5px;
-    background-repeat: no-repeat;
-    padding-left: 64px;
-    padding-top: 5px;
-    height: 70px;
-    font-size: 28px;
-    height: 150px
-}
 .contour-flou{
     -webkit-box-shadow: 0px 0px 10px 2px rgba(33, 36, 43, 0.75);
     border-radius: 10%;
@@ -220,3 +210,65 @@ footer .navbar {
 .fb-like{
     background-color: white;
 }
+.featurette-divider {
+    margin: 80px 0; /* <hr> between each */
+  }
+   .featurette {
+    padding-top: 120px;
+    overflow: hidden; /* Clear floats */
+  }
+   .featurette-image {
+    margin-top: −120px; /* Vertically center image with the text */
+  }
+   .featurette-heading {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #292c2f
+  }
+   .featurette-image.pull-left {
+    margin-right: 40px;
+  }
+   .featurette-image.pull-right {
+    margin-left: 40px;
+  }.parallax {
+    /* The image used */
+    background-image: url("../images/fond.jpg");
+  
+    /* Set a specific height */
+    height: 200px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }.border{
+    background-color: #292c2f;
+    color: #fff;
+    padding: 13px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    top: 50px;
+}
+     .caption{ 
+  top: 25%;
+  text-align: center;
+  color: #000;
+  min-height: 100px;
+  position: relative;
+}.border-small{
+    background-color: #292c2f;
+    color: #fff;
+    padding: 13px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    top: 25px;
+}.caption-small{ 
+    top: 25%;
+    text-align: center;
+    color: #000;
+    min-height: 100px;
+    position: relative;
+  }

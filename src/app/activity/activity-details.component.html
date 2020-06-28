@@ -4,64 +4,82 @@
       <img src="images/{{activity.picture | lowercase}}" class="details-image" />
     </div>
     <div class="col-md-6">
-      <h3>{{ activity.name | capitalize }} <i *ngIf="activity.registerUrl">(registration needed please)</i> <br/></h3>
-      <h4><div [innerHTML]="activity.description"></div></h4>
+      <h3><img src="images/camera.png" width="25" height="25">  {{ activity.name | capitalize }}</h3>
       <h4>
-        <br />
-        When ? {{ activity.date }}<br/><br />
-        You want to book this tour ? You need an information ? Contact me below and I will contact you soon
-        <div id='form-wrapper'>
-          <form [formGroup]='contactForm' name="contact" id='contact-form' method="post" (ngSubmit)="onSubmit()" >
-            <input type="hidden" name="form-name" value="contact" />
-            <p style='display: none;'>
-              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </p>
-            <p class='form-row'>
-              <label>Your Name: </label><input type='text' name="name" formControlName="name"  placeholder="Your name here" title="Name"  required/> 
-            </p>
-            <div *ngIf="name.invalid && (name.dirty || name.touched)"
-                class="alert alert-danger">
-              <div *ngIf="name.errors.required">
-                Name is required.
-              </div>
-              <div *ngIf="name.errors.minlength">
-                Name must be at least 2 characters long.
-              </div>
-            </div>
-            <p class='form-row'>
-              <label>Email Address: </label><input type='email' name="email" placeholder="your@email" title="Contact email" formControlName="email" required/>
-            </p>
-            <div *ngIf="email.invalid && (email.dirty || email.touched)"
-                class="alert alert-danger">
-              <div *ngIf="email.errors.required">
-                Email is required.
-              </div>
-              <div *ngIf="email.dirty">
-                Email must be a valid email
-              </div>
-            </div>
-            <p class='form-row'>
-              <label>Your Message: </label><textarea id='message' name="message" placeholder="Message here (10 characters min)" title="Enter a message here: questions, reservation request..." formControlName="message" required></textarea>
-            </p>
-            <div *ngIf="message.invalid && (message.dirty || message.touched)"
-                class="alert alert-danger">
-              <div *ngIf="message.errors.required">
-                Message is required.
-              </div>
-              <div *ngIf="message.errors.minlength">
-                Message must be at least 10 characters long.
-              </div>
-            </div>
-            <p id='button-row'>
-              <button id='submit-button' type='submit'  [disabled]="!contactForm.valid">Contact Me!</button>
-            </p>
-          </form>
-        </div>
-        <!--Where ? {{ activity.address }}<br/>-->
+        <div [innerHTML]="activity.description"></div>
       </h4>
     </div>
   </div>
-  <br /><br /><!--
+  <div class="row ">
+    <div class="col-md-12 caption-small">
+      <span class="border-small">When ?</span>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-12 ">
+      <p>{{ activity.date }}</p>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-12 caption-small">
+      <span class="border-small">Book Form</span>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-12">
+      You want to book this tour ? You need an information ? Contact me below and I will contact you soon
+      <div id='form-wrapper'>
+        <form [formGroup]='contactForm' name="contact" id='contact-form' method="post" (ngSubmit)="onSubmit()">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style='display: none;'>
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <p class='form-row'>
+            <label>Your Name: </label><input type='text' name="name" formControlName="name" placeholder="Your name here"
+              title="Name" required />
+          </p>
+          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-info">
+            <div *ngIf="name.errors.required">
+              Name is required.
+            </div>
+            <div *ngIf="name.errors.minlength">
+              Name must be at least 2 characters long.
+            </div>
+          </div>
+          <p class='form-row'>
+            <label>Email Address: </label><input type='email' name="email" placeholder="your@email"
+              title="Your contact email" formControlName="email" required />
+          </p>
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-info">
+            <div *ngIf="email.errors.required">
+              Email is required.
+            </div>
+            <div *ngIf="email.dirty">
+              Email must be a valid email
+            </div>
+          </div>
+          <p class='form-row'>
+            <label>Your Message: </label><textarea id='message' name="message"
+              placeholder="Your message here (10 characters min)"
+              title="Enter a message here: questions, reservation request..." formControlName="message"
+              required></textarea>
+          </p>
+          <div *ngIf="message.invalid && (message.dirty || message.touched)" class="alert alert-info">
+            <div *ngIf="message.errors.required">
+              Message is required.
+            </div>
+            <div *ngIf="message.errors.minlength">
+              Message must be at least 10 characters long.
+            </div>
+          </div>
+          <p id='button-row'>
+            <button class="btn btn-primary bouton-details" id='submit-button' type='submit' [disabled]="!contactForm.valid">Send</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--
   <div class="row">
     <div class="col-md-12">
       <cm-map [latitude]="activity.latitude"
@@ -71,7 +89,7 @@
            [markerText]="'<h3>' + activity.name + '</h3>' + activity.date + ' with ' + activity.organizerName"></cm-map>
     </div>
   </div>-->
-</div>   
+</div>
 <div *ngIf="!activity" class="row">
-   No activity found
-</div>  
+  No activity found
+</div>

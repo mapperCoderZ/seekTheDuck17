@@ -1,34 +1,106 @@
 <div class="activities view indent">
     <div class="container">
-        <header>
-            <h3>
-                Come & sleep in Lyon
-            </h3>
-        </header>
-        <br />
-        <h3>How to book ? How to pay ?</h3>
-        <p>Enter your contact information in the form next to the activity. I will contact you soon.</p>
-        <h3>How to come ?</h3>
-        <ul>
-            <li>Train : 2 hours from Paris </li>
-            <li>Plane : airport is about 25minutes from city center, possibility to care you </li>
-        </ul>
-        <h3>Climate</h3>
-        <p>The climate of Lyon and the Rhone is semi-continental with alternating influences of Mediterranean climate, continental and oceanic.
+        <div class="row ">
+            <div class="col-md-12">
+                <h1 class="df-head">
+                    Practical informations
+                </h1>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 caption-small">
+                <span class="border-small">How to book ? How to pay ?</span>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 lead">
+                You want to book a tour ? You need an information ? Contact me below and I will contact you soon
+                <div id='form-wrapper'>
+                    <form [formGroup]='contactForm' name="contact" id='contact-form' method="post"
+                        (ngSubmit)="onSubmit()">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p style='display: none;'>
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <p class='form-row'>
+                            <label>Your Name: </label><input type='text' name="name" formControlName="name"
+                                placeholder="Your name here" title="Name" required />
+                        </p>
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-info">
+                            <div *ngIf="name.errors.required">
+                                Name is required.
+                            </div>
+                            <div *ngIf="name.errors.minlength">
+                                Name must be at least 2 characters long.
+                            </div>
+                        </div>
+                        <p class='form-row'>
+                            <label>Email Address: </label><input type='email' name="email" placeholder="your@email"
+                                title="Your contact email" formControlName="email" required />
+                        </p>
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-info">
+                            <div *ngIf="email.errors.required">
+                                Email is required.
+                            </div>
+                            <div *ngIf="email.dirty">
+                                Email must be a valid email
+                            </div>
+                        </div>
+                        <p class='form-row'>
+                            <label>Your Message: </label><textarea id='message' name="message"
+                                placeholder="Your message here (10 characters min)"
+                                title="Enter a message here: questions, reservation request..."
+                                formControlName="message" required></textarea>
+                        </p>
+                        <div *ngIf="message.invalid && (message.dirty || message.touched)" class="alert alert-info">
+                            <div *ngIf="message.errors.required">
+                                Message is required.
+                            </div>
+                            <div *ngIf="message.errors.minlength">
+                                Message must be at least 10 characters long.
+                            </div>
+                        </div>
+                        <p id='button-row'>
+                            <button class="btn btn-primary bouton-details" id='submit-button' type='submit' [disabled]="!contactForm.valid">Send</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 caption-small">
+                <span class="border-small">How to come ?</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 lead">
+                <ul>
+                    <li>Train : 2 hours from Paris </li>
+                    <li>Plane : airport is about 25minutes from city center, possibility to care you </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 caption-small">
+                <span class="border-small">How is the climate ?</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="lead text-justify">
+                    The climate of Lyon and the Rhone is semi-continental with alternating influences of Mediterranean
+                    climate,
+                    continental and oceanic.
 
-            Springs and falls are very pleasant.
-            
-            Summer can be sweltering with temperatures up to 30 degrees.
-            
-            Winters are harsh, marked by sometimes heavy frosts and snowfalls that can go up to 10 cm which invariably cause huge traffic jams !</p>
-        <h3>Where to sleep ?</h3>
-        <ul>
-            <li>Hostels : Ask me, special fees </li>
-        </ul>
+                    Springs and falls are very pleasant.
+
+                    Summer can be sweltering with temperatures up to 30 degrees.
+
+                    Winters are harsh, marked by sometimes heavy frosts and snowfalls that can go up to 10 cm which
+                    invariably
+                    cause huge traffic jams !
+                </p>
+            </div>
+        </div>
     </div>
 </div>
-<br/>
-<div id="mmd-flight-widget"></div>
-
-
-
